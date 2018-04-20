@@ -1,0 +1,137 @@
+{
+	"info": {
+		"_postman_id": "63b2b017-3f92-4a3c-a9cc-744dd9e892b6",
+		"name": "rhcustomer",
+		"description": "rhcustomer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "rhcustomer",
+			"description": "Folder for rhcustomer",
+			"item": [
+				{
+					"name": "get rhcustomer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http:///rhcustomer",
+							"host": [
+								"http:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"rhcustomer"
+							]
+						},
+						"description": "get rh customer"
+					},
+					"response": [
+						{
+							"id": "fb55c422-7f74-4708-8648-b25328ec1882",
+							"name": "get rhcustomer",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"url": {
+									"raw": "http:///rhcustomer",
+									"host": [
+										"http:"
+									],
+									"port": "",
+									"path": [
+										"",
+										"",
+										"rhcustomer"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [],
+							"cookie": [],
+							"body": "{\n\t\"name\": \"customer\",\n\t\"category\": \"enterprise\",\n\t\"id\": 1,\n\t\"region\": \"Americas\",\n\t\"supportlevel\": \"premier\"\n}"
+						}
+					]
+				},
+				{
+					"name": "put rhcustomer",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "use this format"
+						},
+						"url": {
+							"raw": "http:///rhcustomer",
+							"host": [
+								"http:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"rhcustomer"
+							]
+						},
+						"description": "put rhcustomer"
+					},
+					"response": []
+				},
+				{
+					"name": "post rhcustomer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http:///rhcustomer",
+							"host": [
+								"http:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"rhcustomer"
+							]
+						},
+						"description": "post rhcustomer"
+					},
+					"response": []
+				},
+				{
+					"name": "",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http:///rhcustomer",
+							"host": [
+								"http:"
+							],
+							"port": "",
+							"path": [
+								"",
+								"",
+								"rhcustomer"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

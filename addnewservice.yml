@@ -1,0 +1,27 @@
+---
+- name: Hi K
+  hosts: ec2-13-59-7-76.us-east-2.compute.amazonaws.com
+  tasks:
+  - include_vars: ./newservicedetails.yml
+  - name: create new service
+    uri:
+      url: "{{url}}"
+      method: "{{verb}}"
+      body: "access_token={{access_token}}&name={{name}}&deployment_option={{deployment_option}}&backend_version={{backend_version}}&system_name={{system_name}}"
+      return_content: yes
+      status_code: "{{status_code}}"
+    register: result
+  - name: Find the project id
+    set_fact:
+      example_plan_id: "{{result.json.service.id }}"
+  - debug:
+      msg: "{{result.json.service.id}}"
+
+  - include_vars: ./updateservicedetails.yml
+  - name: update backend production and staging urls
+    uri:
+      url: "{{url}}/{{newserviceid}}/proxy.xml"
+      method: "{{verb}}"
+      body: "access_token={{access_token}}&name={{name}}&api_backend={{api_backend}}&endpoint={{endpoint}}&sandbox_endpoint={{sandbox}}"
+      return_content: yes
+      status_code: "{{status_code}}"

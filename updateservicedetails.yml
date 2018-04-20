@@ -1,0 +1,26 @@
+---
+access_token: 0accbf3a682fb107e3e181a6b80fbb156258b9fe8ee696b61c7706b1e02aa76f
+name: customer206
+deployment_option: hosted
+backend_version: 1
+system_name: customer206
+status_code: '200'
+basedomain: https://tigerteam-admin.3scale.net
+url: https://tigerteam-admin.3scale.net/admin/api/services
+verb: PUT
+access_token: 0accbf3a682fb107e3e181a6b80fbb156258b9fe8ee696b61c7706b1e02aa76f
+api_backend: https://echo-api.3scale.net:443
+endpoint: https://customer206-2445582275120.production.gw.apicast.io:443
+sandbox: https://customer206-2445582275120.staging.gw.apicast.io:443
+deployment_option: hosted
+backend_version: 1
+service_id: 2555417756894
+http_method: GET
+pattern: /mymethod629
+delta: 1
+applicationplanname: goldplan629
+applicationplansystemname: goldplan629
+accountid: 2445582275121
+applicationname: cicdapp629
+applicationdescription: cicdapp629
+user_key: welcome629
