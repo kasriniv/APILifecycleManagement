@@ -23,7 +23,7 @@ git clone https://github.com/kasriniv/$appname.git
 sleep 10s
 cd $appname
 pwd
-oc login -u admin -p admin https://ec2-13-59-7-76.us-east-2.compute.amazonaws.com:8443
+oc login -u admin -p <blahpwd> https://<blah>.compute.amazonaws.com:8443
 
 oc new-project $appname
 
@@ -31,4 +31,4 @@ sleep 10s
 
 mvn fabric8:deploy -Popenshift
 sleep 50s
-curl http://vertx$appname-$appname.13.59.7.76.nip.io/$appname
+curl http://vertx$appname-$appname.<BLAHIP>.nip.io/$appname
