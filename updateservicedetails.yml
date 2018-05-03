@@ -1,15 +1,15 @@
 ---
-access_token: 0accbf3a682fb107e3e181a6b80fbb156258b9fe8ee696b61c7706b1e02aa76f
+access_token: <youraccesstoken>
 name: customer
 deployment_option: hosted
 backend_version: 1
 system_name: customer
 status_code: '200'
-basedomain: https://tigerteam-admin.3scale.net
-url: https://tigerteam-admin.3scale.net/admin/api/services
+basedomain: https://<yourdomain>-admin.3scale.net
+url: https://<yourdomain>-admin.3scale.net/admin/api/services
 verb: PUT
-access_token: 0accbf3a682fb107e3e181a6b80fbb156258b9fe8ee696b61c7706b1e02aa76f
-api_backend: http://vertxcustomer-customer.13.59.7.76.nip.io:80
+access_token: <your token>
+api_backend: http://vertxcustomer-customer.<blahip>.nip.io:80
 endpoint: https://customer-2445582275120.production.gw.apicast.io:443
 sandbox: https://customer-2445582275120.staging.gw.apicast.io:443
 deployment_option: hosted
