@@ -1,6 +1,6 @@
 ---
 - name: Hi K
-  hosts: ec2-13-59-7-76.us-east-2.compute.amazonaws.com
+  hosts: <blahip>.compute.amazonaws.com
   tasks:
   - include_vars: ./newservicedetails.yml
   - name: create new service
