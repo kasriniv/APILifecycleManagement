@@ -8,4 +8,14 @@ echo $2
 echo "new app name"
 sed -i .bak 's/'$1'/'$2'/g' newservicedetails.yml
 sed -i .bak 's/'$1'/'$2'/g' updateservicedetails.yml
+myvar=http://vertx$2-$2.13.59.7.76.nip.io:80
+echo $myvar
+
+
+myvar2=api_backend:$myvar
+echo $myvar2
+
+
+sed -i .bak 's%'api_backend:.*'%'api_backend:\\\ $myvar'%g' updateservicedetails.yml
+
 ansible-playbook  -u ec2-user --inventory-file=ansiblehosts --private-key=/Volumes/D/KEYS/kavithaohio.pem updateservice.yml

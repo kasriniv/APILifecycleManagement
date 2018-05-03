@@ -15,16 +15,20 @@ fi
 
 appname=$1
 echo "name of app to be deployed"
-mkdir $appname
-cd $appname
-git clone https://github.com/kasriniv/$appname.git
-oc login -u admin -p admin https://ec2-13-59-7-76.us-east-2.compute.amazonaws.com:8443
+cd  /Volumes/D/demotemp/temp
 
-oc new-project $appname
-oc get projects
+pwd
+sleep 10s
+git clone https://github.com/kasriniv/$appname.git
 sleep 10s
 cd $appname
 pwd
+oc login -u admin -p admin https://ec2-13-59-7-76.us-east-2.compute.amazonaws.com:8443
+
+oc new-project $appname
+
+sleep 10s
+
 mvn fabric8:deploy -Popenshift
-sleep 100s
+sleep 50s
 curl http://vertx$appname-$appname.13.59.7.76.nip.io/$appname

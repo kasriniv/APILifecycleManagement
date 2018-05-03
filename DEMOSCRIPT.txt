@@ -1,0 +1,59 @@
+DEMO script
+
+1. initialize a new repository
+2. create a sample json
+2. create a new api in APIcurio and save to github
+3. import into postman, add example, add version number and save to Github
+4. import into microcks and show mock url and test  curl http://microcks-microcks.18.220.192.223.nip.io
+5. gitclone into iamadeveloper
+5. generate vertx code
+6. change pom
+7. push to github
+8. run deployapp.sh <appname>
+9. run runansible.sh <oldappname> newappname
+
+
+
+java -cp /Volumes/D/3scale/FMWorkshop/DEMO/vertx/swagger-codegen-cli-2.2.2.jar:/Volumes/D/3scale/FMWorkshop/DEMO/vertx/vertx-swagger-codegen-1.0.0.jar io.swagger.codegen.SwaggerCodegen generate   -l java-vertx   -o /Volumes/D/demotemp/iamdeveloper/dogs   -i /Volumes/D/demotemp/iamdeveloper/dogs/dogs.json    --group-id org.kasriniv.vertxdogs    --artifact-id vertxdogs
+
+java -cp /Volumes/D/3scale/FMWorkshop/DEMO/vertx/swagger-codegen-cli-2.2.2.jar:/Volumes/D/3scale/FMWorkshop/DEMO/vertx/vertx-swagger-codegen-1.0.0.jar io.swagger.codegen.SwaggerCodegen generate   -l java-vertx   -o /Volumes/D/demotemp/iamadeveloper/employee   -i /Volumes/D/demotemp/iamadeveloper/employee/employee.json    --group-id org.kasriniv.vertxemployee    --artifact-id vertxemployee
+
+java -cp /Volumes/D/3scale/FMWorkshop/DEMO/vertx/swagger-codegen-cli-2.2.2.jar:/Volumes/D/3scale/FMWorkshop/DEMO/vertx/vertx-swagger-codegen-1.0.0.jar io.swagger.codegen.SwaggerCodegen generate   -l java-vertx   -o /Volumes/D/demotemp/iamadeveloper/music   -i /Volumes/D/demotemp/iamadeveloper/music/music.json    --group-id org.kasriniv.vertxmusic    --artifact-id vertxmusic
+
+
+
+
+lets test the mock url now..the persona testing this is an interested 'consuming'developer
+
+
+curl http://microcks-microcks.18.220.192.223.nip.io//rest/dogs/1.0/dogs
+
+
+now the developer uses th swagger to auto generate server code and now we provide an implementation
+
+done with implementation
+now we fix the auto gen pom
+
+now the developer commits and pushes to github
+
+now the cicd pipeline is triggrreed by the git commit : have to wire this with jenkins
+
+step 1  : deploy app to openhsift
+
+
+kavitha notes: need to reduce sleep
+
+
+yaay so the app is deployed and tested !!! verifying on openshift as well..
+
+now the pipeline deploys/creates 3scale artifacts
+kavitha notes: need to reduce sleep
+
+so all threescale artifacts have been created and a consuming application created , a key got and the 3scale endpoint for the dogs application (provider) tested !
+
+That concludes the api lifecycle demo
+from design in APIcurio
+to mocking in Microcks
+to apifirst /contract first approach to developement
+to deploying the backend to OpenShift
+to auto-generating 3scale artifacts to protect the backend !

@@ -3,7 +3,7 @@ status_code: '201'
 url: https://tigerteam-admin.3scale.net/admin/api/services.json
 verb: POST
 access_token: 0accbf3a682fb107e3e181a6b80fbb156258b9fe8ee696b61c7706b1e02aa76f
-name: customer206
+name: customer
 deployment_option: hosted
 backend_version: 1
-system_name: customer206
+system_name: customer

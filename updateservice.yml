@@ -18,6 +18,8 @@
       msg: "{{result.json.service.id}}"
 
   - include_vars: ./updateservicedetails.yml
+  - debug:
+      msg: "{{api_backend}}"
   - name: update backend production and staging urls
     uri:
       url: "{{url}}/{{newserviceid}}/proxy.xml"
@@ -66,15 +68,15 @@
       return_content: yes
       status_code: 201
 
-  - name: sleep for 100 seconds and continue with play
-    wait_for: timeout=100
+  - name: sleep for 60 seconds and continue with play
+    wait_for: timeout=60
 
   - name: quick test
     uri:
-      url: "{{sandbox}}/?user_key={{user_key}}"
+      url: "{{sandbox}}/{{name}}?user_key={{user_key}}"
       method: GET
       return_content: yes
-      status_code: 200 
+      status_code: 200
     register: finalresult
 
   - debug:
